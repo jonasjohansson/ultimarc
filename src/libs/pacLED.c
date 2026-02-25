@@ -218,6 +218,19 @@ bool updateBoardPacLED (json_object *jobj)
     goto error;
   }
 
+  /* Clear flash and start script recording */
+  map[0] = 0xFF;
+  map[1] = 0x04;
+  libusb_control_transfer(handle, UM_REQUEST_TYPE, UM_REQUEST,
+                          PACLED_VALUE, PACLED_INDEX, map,
+                          PACLED_MESG_LENGTH, UM_TIMEOUT);
+
+  map[0] = 0xFF;
+  map[1] = 0x01;
+  libusb_control_transfer(handle, UM_REQUEST_TYPE, UM_REQUEST,
+                          PACLED_VALUE, PACLED_INDEX, map,
+                          PACLED_MESG_LENGTH, UM_TIMEOUT);
+
   /* Intensity settings */
   if (pLED.ledMapIntensity == true)
   {
@@ -333,6 +346,13 @@ bool updateBoardPacLED (json_object *jobj)
                             PACLED_MESG_LENGTH,
                             UM_TIMEOUT);
   }
+
+  /* Stop script recording — saves to flash */
+  map[0] = 0xFF;
+  map[1] = 0x03;
+  libusb_control_transfer(handle, UM_REQUEST_TYPE, UM_REQUEST,
+                          PACLED_VALUE, PACLED_INDEX, map,
+                          PACLED_MESG_LENGTH, UM_TIMEOUT);
 
   exit:
     closeUSB(ctx, handle, PACLED_INTERFACE);

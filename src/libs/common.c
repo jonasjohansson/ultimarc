@@ -148,14 +148,13 @@ claimInterface(struct libusb_device_handle *handle, int interface, bool autoconn
   int ret = 0;
   bool success = true;
 
-#ifdef __linux__
   if (autoconnect == 0)
   {
-    /* detach the kernel driver */
+    /* detach the kernel driver (works on both Linux and macOS with libusb >= 1.0.23) */
     if(libusb_kernel_driver_active(handle, interface) == 1)
     {
       log_info ("Kernel Driver Active.");
-      if(libusb_detach_kernel_driver(handle, interface) == 0) //detach it
+      if(libusb_detach_kernel_driver(handle, interface) == 0)
         log_info ("Kernel Driver Detached.");
     }
   }
@@ -163,7 +162,6 @@ claimInterface(struct libusb_device_handle *handle, int interface, bool autoconn
   {
     libusb_set_auto_detach_kernel_driver(handle, 1);
   }
-#endif
 
   ret = libusb_claim_interface(handle, interface);
   if (ret < 0)
