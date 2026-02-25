@@ -1,0 +1,14 @@
+# Build artifacts
+*.o
+umtool
+
+# macOS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+
+# IDE
+.claude/
+.vscode/
