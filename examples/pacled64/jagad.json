@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "product": "pacled64",
+  "board id": 1,
+  "intensity": [
+    {"led": 12, "intensity": 255},
+    {"led": 13, "intensity": 0},
+    {"led": 14, "intensity": 255},
+    {"led": 27, "intensity": 255},
+    {"led": 28, "intensity": 0},
+    {"led": 29, "intensity": 255},
+
+    {"led": 9,  "intensity": 255},
+    {"led": 10, "intensity": 100},
+    {"led": 11, "intensity": 0},
+    {"led": 24, "intensity": 255},
+    {"led": 25, "intensity": 100},
+    {"led": 26, "intensity": 0},
+
+    {"led": 18, "intensity": 0},
+    {"led": 19, "intensity": 0},
+    {"led": 20, "intensity": 255},
+    {"led": 3,  "intensity": 0},
+    {"led": 4,  "intensity": 0},
+    {"led": 5,  "intensity": 255},
+
+    {"led": 0,  "intensity": 255},
+    {"led": 1,  "intensity": 255},
+    {"led": 2,  "intensity": 0},
+    {"led": 15, "intensity": 255},
+    {"led": 16, "intensity": 255},
+    {"led": 17, "intensity": 0}
+  ],
+  "fade": [
+    {"led": 12, "fade": 0},
+    {"led": 13, "fade": 0},
+    {"led": 14, "fade": 0},
+    {"led": 27, "fade": 0},
+    {"led": 28, "fade": 0},
+    {"led": 29, "fade": 0},
+
+    {"led": 9,  "fade": 0},
+    {"led": 10, "fade": 0},
+    {"led": 11, "fade": 0},
+    {"led": 24, "fade": 0},
+    {"led": 25, "fade": 0},
+    {"led": 26, "fade": 0},
+
+    {"led": 18, "fade": 0},
+    {"led": 19, "fade": 0},
+    {"led": 20, "fade": 0},
+    {"led": 3,  "fade": 0},
+    {"led": 4,  "fade": 0},
+    {"led": 5,  "fade": 0},
+
+    {"led": 0,  "fade": 0},
+    {"led": 1,  "fade": 0},
+    {"led": 2,  "fade": 0},
+    {"led": 15, "fade": 0},
+    {"led": 16, "fade": 0},
+    {"led": 17, "fade": 0}
+  ]
+}
