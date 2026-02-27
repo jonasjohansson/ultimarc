@@ -178,23 +178,23 @@
       "shift": ""
     },
     "4up": {
-      "key": "up",
+      "key": "z",
       "shift": ""
     },
     "4down": {
-      "key": "down",
+      "key": "x",
       "shift": ""
     },
     "4right": {
-      "key": "right",
+      "key": "v",
       "shift": ""
     },
     "4left": {
-      "key": "left",
+      "key": "c",
       "shift": ""
     },
     "4sw1": {
-      "key": "enter",
+      "key": "b",
       "shift": ""
     },
     "4sw2": {
